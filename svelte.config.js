@@ -9,7 +9,10 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			edge: false,
+			split: true
+		}),
 		alias: {
 			'@routes': path.resolve('./src/routes'),
 			'@utils': path.resolve('./src/utils'),
