@@ -123,7 +123,7 @@
     esbuild "^0.14.42"
     worktop "0.8.0-next.14"
 
-"@sveltejs/adapter-netlify@1.0.0-next.66":
+"@sveltejs/adapter-netlify@1.0.0-next.66", "@sveltejs/adapter-netlify@^1.0.0-next.66":
   version "1.0.0-next.66"
   resolved "https://registry.npmmirror.com/@sveltejs/adapter-netlify/-/adapter-netlify-1.0.0-next.66.tgz#55c1bf03af3a8d38afaacaeacec766043d81fb5f"
   integrity sha512-UypTRnTd+R1O6SaDdc8l3A3c9/mQF8xLNoVb3Ay5ipb7uPU5WmjVYjfLVGyeVy67gztFfeFC/9Esu4OI2Ayx1A==

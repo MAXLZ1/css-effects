@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-netlify';
 import preprocess from 'svelte-preprocess';
 import path from 'path';
 
@@ -14,7 +14,7 @@ const config = {
 			'@routes': path.resolve('./src/routes'),
 			'@utils': path.resolve('./src/utils'),
 			'@components': path.resolve('./src/lib/components'),
-		}
+		},
 	}
 };
 
