@@ -1,6 +1,7 @@
 <script lang="ts">
   import MenuOf3D from '@components/MenuOf3D/index.svelte'
   import Seo from '../../lib/components/Seo/index.svelte';
+  import GithubLink from '../../lib/components/GithubLink/index.svelte';
 
   const menus = [
     {
@@ -42,6 +43,8 @@
 </style>
 
 <Seo title="3d menu" description="3d menu by CSS." />
+
+<GithubLink />
 
 <div class="container">
   <MenuOf3D {menus} />

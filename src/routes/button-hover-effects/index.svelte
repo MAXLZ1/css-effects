@@ -1,6 +1,7 @@
 <script lang="ts">
   import ButtonOfHoverEffects from '../../lib/components/ButtonOfHoverEffects/index.svelte'
   import Seo from '../../lib/components/Seo/index.svelte';
+  import GithubLink from '../../lib/components/GithubLink/index.svelte';
 </script>
 
 <style lang="less">
@@ -15,6 +16,8 @@
 </style>
 
 <Seo title="button hover effects" description="A button with hover effect." />
+
+<GithubLink />
 
 <div class="container">
   <ButtonOfHoverEffects />

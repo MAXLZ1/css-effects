@@ -1,5 +1,6 @@
 <script lang="ts">
   import Seo from '../../lib/components/Seo/index.svelte';
+  import GithubLink from '../../lib/components/GithubLink/index.svelte';
 
   const menus = [
     {
@@ -81,6 +82,8 @@
 </style>
 
 <Seo title="menu hover effect" description="Menu hover effect." keywords="hover, menu hover" />
+
+<GithubLink />
 
 <div class="container">
   <ul class="menu">

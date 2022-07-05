@@ -1,5 +1,7 @@
 import { gsap } from 'gsap'
+import SvgFilter from '../lib/components/SvgFilter/index.svelte'
 
+console.log(SvgFilter)
 type Dom = {
   el: HTMLElement,
   text?: HTMLElement,

@@ -1,6 +1,7 @@
 <script lang="ts">
   import ProfileCard from '../../lib/components/ProfileCard/index.svelte'
   import Seo from '../../lib/components/Seo/index.svelte';
+  import GithubLink from '../../lib/components/GithubLink/index.svelte';
 </script>
 
 <style lang="less">
@@ -12,6 +13,8 @@
 </style>
 
 <Seo title="animated card" description="A animated card." />
+
+<GithubLink color="#4f4c4c" />
 
 <div class="container">
   <ProfileCard

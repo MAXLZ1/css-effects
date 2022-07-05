@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte'
   import Seo from '../../lib/components/Seo/index.svelte';
+  import GithubLink from '../../lib/components/GithubLink/index.svelte';
 
   const menus = [
     {
@@ -96,6 +97,8 @@
 </style>
 
 <Seo title="magi -menu indicator" description="Magic menu indicator." />
+
+<GithubLink />
 
 <div class="container">
   <div class="menu" bind:this={menu}>

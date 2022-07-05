@@ -2,9 +2,11 @@
   import type { Menu } from './types'
   import { Position } from './types'
   import { page } from '$app/stores'
+  import { goto } from '$app/navigation'
 
   export let menus: Menu = []
   export let position: Position = Position.lt
+  export let replace = true
   
   $: style = position === Position.lt ?
     'left: 0;top: 0;' :
@@ -18,6 +20,10 @@
 
   function active(href: string): boolean {
     return href === $page.url.pathname
+  }
+  
+  function handleClick(href) {
+    goto(href, { replaceState: replace })
   }
 </script>
 
@@ -37,6 +43,7 @@
       a {
         color: #FFFFFF;
         text-decoration: none;
+        cursor: pointer;
         
         &.active {
           cursor: default;
@@ -52,8 +59,7 @@
     <li>
       <a
         class={active(href) ? 'active' : ''}
-        href={active(href) ? 'javascript:void(0);' : href}
-        target={target || '_self'}
+        on:click={() => handleClick(href)}
       >{text}</a>
     </li>
   {/each}

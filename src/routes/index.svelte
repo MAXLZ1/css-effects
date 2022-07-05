@@ -4,6 +4,7 @@
   import * as AnimationLink from '../utils/animationLink'
   import { onMount } from 'svelte'
   import CSSBackgroundEffects from '../lib/components/CSSBackgroundEffects/index.svelte';
+  import GithubLink from '../lib/components/GithubLink/index.svelte';
 
   let navDom
   const menus = [
@@ -112,6 +113,8 @@
 </style>
 
 <Seo />
+
+<GithubLink />
 
 <SvgFilter />
 

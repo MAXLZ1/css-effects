@@ -1,5 +1,6 @@
 <script>
   import Seo from '../../lib/components/Seo/index.svelte';
+  import GithubLink from '../../lib/components/GithubLink/index.svelte';
 </script>
 
 <style lang="less">
@@ -30,6 +31,8 @@
 </style>
 
 <Seo title="custom shape button" description="A custom shape button with hover animation." keywords="clip-path, button" />
+
+<GithubLink />
 
 <div class="container">
   <button class="button">BUTTON</button>

@@ -1,6 +1,7 @@
 <script lang="ts">
   import AnimationLabelInput from '../../lib/components/AnimationLabelInput/index.svelte'
   import Seo from '../../lib/components/Seo/index.svelte';
+  import GithubLink from '../../lib/components/GithubLink/index.svelte';
 
   let firstName = ''
   let secondName = ''
@@ -25,6 +26,8 @@
 </style>
 
 <Seo title="animation of label for input" description="Animation of label for input." keywords="input, input label" />
+
+<GithubLink />
 
 <div class="container">
   <AnimationLabelInput label="FIRST NAME" labelFill={false} bind:value={firstName} />

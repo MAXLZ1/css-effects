@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount, tick } from 'svelte'
   import Seo from '../../lib/components/Seo/index.svelte';
+  import GithubLink from '../../lib/components/GithubLink/index.svelte';
   const navigations = [
     {
       title: 'Home',
@@ -153,6 +154,8 @@
 </style>
 
 <Seo title="animated magic menu indictor" description="A animated magic menu indictor." />
+
+<GithubLink />
 
 <div class="container" bind:this={container}>
   <div class="navigation-container" bind:this={navContainer}>

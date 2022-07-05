@@ -2,6 +2,7 @@
   import ImageFragments from '../../lib/components/ImageFragments/index.svelte'
   import Menu from '../../lib/components/Menu/index.svelte';
   import Seo from '../../lib/components/Seo/index.svelte';
+  import GithubLink from '../../lib/components/GithubLink/index.svelte';
 
   const menus = [
     {
@@ -31,6 +32,8 @@
 </style>
 
 <Seo title="image fragment animation" description="Image fragment animation." />
+
+<GithubLink />
 
 <Menu {menus} />
 

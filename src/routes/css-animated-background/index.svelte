@@ -1,6 +1,7 @@
 <script lang="ts">
   import CSSBackgroundEffects from '../../lib/components/CSSBackgroundEffects/index.svelte'
   import Seo from '../../lib/components/Seo/index.svelte';
+  import GithubLink from '../../lib/components/GithubLink/index.svelte';
 </script>
 
 <style lang="less">
@@ -14,6 +15,8 @@
 </style>
 
 <Seo title="css animated background" description="CSS animated background." />
+
+<GithubLink />
 
 <div class="container">
   <CSSBackgroundEffects />
