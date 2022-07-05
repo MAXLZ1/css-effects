@@ -8,7 +8,6 @@ type Dom = {
   feDisplacementMap?: SVGFEDisplacementMapElement
 }
 
-type Options = { text: true, line: true }
 
 class BaseAnimationLink {
   protected dom: Dom
@@ -18,19 +17,8 @@ class BaseAnimationLink {
   private onMouseEnterFn: (() => void) | undefined
   private onMouseLeaveFn: (() => void) | undefined
 
-  constructor(
-    el: HTMLElement,
-    private options?: Options
-  ) {
+  constructor(el: HTMLElement,) {
     this.dom = { el }
-
-    if (options?.text) {
-      this.dom.text = this.dom.el.querySelector('.menu-text') || undefined
-    }
-
-    if (options?.line) {
-      this.dom.line = this.dom.el.querySelector('.menu-line') || undefined
-    }
 
     this.initEvent()
   }
@@ -50,20 +38,10 @@ class BaseAnimationLink {
     this.tl = gsap.timeline({
       paused: true,
       onStart: () => {
-        if (this.options?.text) {
-          this.dom.text!.style.filter = `url(${this.filterId})`
-        }
-        if (this.options?.line) {
-          this.dom.line!.style.filter = `url(${this.filterId})`
-        }
+        this.dom.el.style.filter = `url(${this.filterId})`
       },
       onComplete: () => {
-        if (this.options?.text) {
-          this.dom.text!.style.filter = `none`
-        }
-        if (this.options?.line) {
-          this.dom.line!.style.filter = `none`
-        }
+        this.dom.el.style.filter = `none`
       }
     })
   }
@@ -72,8 +50,8 @@ class BaseAnimationLink {
 export class AnimationLink1 extends BaseAnimationLink {
   private primitiveValues: { turbulence: number }
 
-  constructor(el: HTMLElement, options: Options = { text: true, line: true }) {
-    super(el, options)
+  constructor(el: HTMLElement) {
+    super(el)
     this.filterId = '#filter-1'
     this.dom.feTurbulence = document.querySelector(`${this.filterId} > feTurbulence`)!
     this.primitiveValues = { turbulence: 0 }
@@ -93,8 +71,8 @@ export class AnimationLink1 extends BaseAnimationLink {
 export class AnimationLink2 extends BaseAnimationLink {
   private primitiveValues: { scale: number }
 
-  constructor(el: HTMLElement, options: Options = { text: true, line: true }) {
-    super(el, options)
+  constructor(el: HTMLElement) {
+    super(el)
     this.filterId = '#filter-2'
     this.dom.feDisplacementMap = document.querySelector(`${this.filterId} > feDisplacementMap`)!
     this.primitiveValues = { scale: 0 }
@@ -115,8 +93,8 @@ export class AnimationLink2 extends BaseAnimationLink {
 export class AnimationLink3 extends BaseAnimationLink {
   private primitiveValues: { turbulence: number }
 
-  constructor(el: HTMLElement, options: Options = { text: true, line: true }) {
-    super(el, options)
+  constructor(el: HTMLElement) {
+    super(el)
     this.filterId = '#filter-3'
     this.dom.feTurbulence = document.querySelector(`${this.filterId} > feTurbulence`)!
     this.primitiveValues = { turbulence: 0 }
@@ -137,8 +115,8 @@ export class AnimationLink3 extends BaseAnimationLink {
 export class AnimationLink4 extends BaseAnimationLink {
   private primitiveValues: { scale: number }
 
-  constructor(el: HTMLElement, options: Options = { text: true, line: true }) {
-    super(el, options)
+  constructor(el: HTMLElement) {
+    super(el)
     this.filterId = '#filter-4'
     this.dom.feDisplacementMap = document.querySelector(`${this.filterId} > feDisplacementMap`)!
     this.primitiveValues = { scale: 0 }
@@ -165,8 +143,8 @@ export class AnimationLink4 extends BaseAnimationLink {
 export class AnimationLink5 extends BaseAnimationLink {
   private primitiveValues: { turbulence: number }
 
-  constructor(el: HTMLElement, options: Options = { text: true, line: true }) {
-    super(el, options)
+  constructor(el: HTMLElement) {
+    super(el)
     this.filterId = '#filter-5'
     this.dom.feTurbulence = document.querySelector(`${this.filterId} > feTurbulence`)!
     this.primitiveValues = { turbulence: 0 }
@@ -175,8 +153,8 @@ export class AnimationLink5 extends BaseAnimationLink {
       this.dom.feTurbulence!.setAttribute('baseFrequency', this.primitiveValues.turbulence + '')
     })
     this.tl!.to(this.primitiveValues, {
-      duration: 0.7,
-      ease: 'expo.out',
+      duration: 0.6,
+      ease: 'power2.out',
       startAt: { turbulence: 0 },
       turbulence: 1
     })

@@ -1,6 +1,8 @@
 <style lang="less">
   .hidden {
     display: none;
+    height: 0;
+    width: 0;
   }
 </style>
 
@@ -17,7 +19,7 @@
     </filter>
     <filter id="filter-3">
       <feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="5" result="warp"></feTurbulence>
-      <feOffset dx="-90" result="warpOffset"></feOffset>
+      <feOffset result="warpOffset"></feOffset>
       <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="35" in="SourceGraphic" in2="warpOffset"></feDisplacementMap>
     </filter>
     <filter id="filter-4">
