@@ -27,10 +27,10 @@
   $: animationClass = animation
   
   onMount(() => {
-    computeBlock()
     imageTag = new Image()
     imageTag.src = image
     imageTag.onload = function () {
+      computeBlock()
       computeCoverSize()
       computeBlockStyle()
     }
