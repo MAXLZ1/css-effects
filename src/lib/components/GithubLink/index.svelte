@@ -2,6 +2,8 @@
   export let color = '#FFFFFF'
   
   $: style = `color: ${color};`
+  
+  const href = 'https://github.com/MAXLZ1/css-effects'
 </script>
 
 <style lang="less">
@@ -15,6 +17,6 @@
   }
 </style>
 
-<a class="github-link" {style} target="_blank">
+<a class="github-link" {style} {href} target="_blank">
   <i class="fa-brands fa-github"></i>
 </a>
